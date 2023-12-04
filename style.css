@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    background-color: black;
+    padding: 1rem;
+}
+.todo{
+    width: 100%;
+    max-width: 25rem;
+    background: #fff;
+    margin: 12rem auto 1.2rem;
+    border-radius: 1rem;
+    padding: 1.2rem;
+}
+.todo h2{
+    color: rgb(43, 115, 129);
+    margin-bottom: 1rem;
+    font-family: cursive;
+    font-weight: 600;
+}
+.row{
+    display: flex;
+    text-align: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    background-color: rgba(102, 101, 101, 0.2);
+    border-radius: 1.5rem;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 1.5rem;
+    padding: 0.7rem;
+    /* font-size: 1rem;  */
+
+}
+button{
+    background: tomato;
+    /* font-size: 1rem;  */
+    font-weight: 600;
+    padding:0.1rem 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all ease-in-out 1s;   
+}
+button:hover{
+    transform: translateX(10%);
+}
+ul li{
+    list-style: none;
+    /* font-size: 1.2rem; */
+    padding: 0.2rem 2rem 1rem 2rem;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 1rem;
+    width:  1rem;
+    /* border: 0.1rem solid red; */
+    border-radius: 50%;
+    background-image: url("unchecked.jpeg");
+    background-size: cover;
+    background-position: center;
+    top: 0.4rem;
+    left: 0.1rem;
+}
+ul li.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url("checked.jpg");
+   
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background-color: #929090; 
+    opacity: 0.5;
+}
